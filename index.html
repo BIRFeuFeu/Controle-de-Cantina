@@ -15,6 +15,7 @@
                 <li><a href="#menu">Cardápio</a></li>
                 <li><a href="#sobre">Sobre Nós</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li><a href="#" onclick="abrirModalLogin(); return false;">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -43,6 +44,27 @@
             </div>
 
             <div class="menu-item">
+                <h3>Lanche: X-Salada Especial</h3>
+                <p>Pão de hambúrguer, blend da casa 150g, queijo, alface, tomate e maionese verde.</p>
+                <p class="price">R$ 22,00</p>
+                <button onclick="fazerPedido('X-Salada Especial')">Pedir Agora</button>
+            </div>
+
+            <div class="menu-item">
+                <h3>Salgado: Coxinha de Frango com Catupiry</h3>
+                <p>Massa crocante por fora, macia por dentro. O recheio mais cremoso!</p>
+                <p class="price">R$ 8,00</p>
+                <button onclick="fazerPedido('Coxinha de Frango')">Pedir Agora</button>
+            </div>
+
+            <div class="menu-item">
+                <h3>Salgado: Pastel de Queijo</h3>
+                <p>Massa sequinha e muito recheio de queijo mussarela.</p>
+                <p class="price">R$ 7,50</p>
+                <button onclick="fazerPedido('Pastel de Queijo')">Pedir Agora</button>
+            </div>
+
+            <div class="menu-item">
                 <h3>Bebida: Suco de Laranja Natural</h3>
                 <p>Feito na hora, 500ml.</p>
                 <p class="price">R$ 9,00</p>
@@ -61,6 +83,22 @@
             <p>Endereço: Rua Fictícia, 123 - Bairro Imaginário</p>
         </section>
     </main>
+
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharModalLogin()">&times;</span>
+            
+            <h2>Login do Cliente</h2>
+            
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" placeholder="Digite seu e-mail ou usuário" required>
+            
+            <label for="password">Senha:</label>
+            <input type="password" id="password" placeholder="Digite sua senha" required>
+            
+            <button onclick="fazerLogin()">Entrar</button>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2025 Cantina da Esquina. Todos os direitos reservados.</p>
