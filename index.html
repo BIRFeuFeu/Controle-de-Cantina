@@ -3,107 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cantina da Esquina</title>
+    <title>Login - Cantina da Esquina</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body-login">
 
-    <header>
-        <h1>Bem-vindo à Cantina da Esquina!</h1>
-        <nav>
-            <ul>
-                <li><a href="#menu">Cardápio</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#" onclick="abrirModalLogin(); return false;">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="login-container">
+        <h1>Cantina da Esquina</h1>
+        <h2>Acesso ao Sistema</h2>
+        <p>Por favor, faça o login para continuar.</p>
 
-    <main>
-        <section id="banner">
-            <h2>O Sabor da Comida Caseira</h2>
-            <p>Venha provar o melhor da culinária local.</p>
-        </section>
-
-        <section id="menu">
-            <h2>Nosso Cardápio</h2>
-            
-            <div class="menu-item">
-                <h3>Prato do Dia: Virado à Paulista</h3>
-                <p>Arroz, feijão, bisteca, ovo frito, couve e banana à milanesa.</p>
-                <p class="price">R$ 25,00</p>
-                <button onclick="fazerPedido('Virado à Paulista')">Pedir Agora</button>
-            </div>
-
-            <div class="menu-item">
-                <h3>Lanche: Bauru Clássico</h3>
-                <p>Pão francês, rosbife, queijo derretido, tomate e picles.</p>
-                <p class="price">R$ 18,00</p>
-                <button onclick="fazerPedido('Bauru Clássico')">Pedir Agora</button>
-            </div>
-
-            <div class="menu-item">
-                <h3>Lanche: X-Salada Especial</h3>
-                <p>Pão de hambúrguer, blend da casa 150g, queijo, alface, tomate e maionese verde.</p>
-                <p class="price">R$ 22,00</p>
-                <button onclick="fazerPedido('X-Salada Especial')">Pedir Agora</button>
-            </div>
-
-            <div class="menu-item">
-                <h3>Salgado: Coxinha de Frango com Catupiry</h3>
-                <p>Massa crocante por fora, macia por dentro. O recheio mais cremoso!</p>
-                <p class="price">R$ 8,00</p>
-                <button onclick="fazerPedido('Coxinha de Frango')">Pedir Agora</button>
-            </div>
-
-            <div class="menu-item">
-                <h3>Salgado: Pastel de Queijo</h3>
-                <p>Massa sequinha e muito recheio de queijo mussarela.</p>
-                <p class="price">R$ 7,50</p>
-                <button onclick="fazerPedido('Pastel de Queijo')">Pedir Agora</button>
-            </div>
-
-            <div class="menu-item">
-                <h3>Bebida: Suco de Laranja Natural</h3>
-                <p>Feito na hora, 500ml.</p>
-                <p class="price">R$ 9,00</p>
-                <button onclick="fazerPedido('Suco de Laranja')">Pedir Agora</button>
-            </div>
-        </section>
-
-        <section id="sobre">
-            <h2>Sobre Nós</h2>
-            <p>A Cantina da Esquina serve comida de qualidade há mais de 10 anos. Usamos ingredientes frescos e muito carinho em cada prato.</p>
-        </section>
-
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Telefone: (11) 98765-4321</p>
-            <p>Endereço: Rua Fictícia, 123 - Bairro Imaginário</p>
-        </section>
-    </main>
-
-    <div id="loginModal" class="modal-overlay">
-        <div class="modal-content">
-            <span class="close-btn" onclick="fecharModalLogin()">&times;</span>
-            
-            <h2>Login do Cliente</h2>
-            
-            <label for="username">Usuário:</label>
-            <input type="text" id="username" placeholder="Digite seu e-mail ou usuário" required>
-            
-            <label for="password">Senha:</label>
-            <input type="password" id="password" placeholder="Digite sua senha" required>
-            
-            <button onclick="fazerLogin()">Entrar</button>
-        </div>
+        <p id="login-error" class="error-message"></p>
+        
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" placeholder="Digite seu usuário" required>
+        
+        <label for="password">Senha:</label>
+        <input type="password" id="password" placeholder="Digite sua senha" required>
+        
+        <button onclick="fazerLogin()">Entrar</button>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Cantina da Esquina. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
