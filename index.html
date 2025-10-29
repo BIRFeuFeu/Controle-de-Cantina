@@ -3,36 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cantina da Escola</title>
+    <title>Cantina da Esquina</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="cantina-card">
-        <h1 id="nome-cantina"></h1>
-        
-        <div class="info-bloco">
-            <p>Salgados disponíveis:</p>
-            <span id="qtd-salgados">--</span>
-        </div>
-        
-        <div class="info-bloco">
-            <p>Preço por unidade:</p>
-            <span id="preco-salgado">R$ --</span>
-        </div>
-        
-        <div class="info-bloco total">
-            <p>Total vendido hoje:</p>
-            <span id="total-vendido">R$ --</span>
-        </div>
-        
-        <button id="btn-vender">Vender 1 Salgado</button>
-        
-        <p class="console-note">
-            Abra o console (F12) para ver os testes de escopo (var, let, const).
-        </p>
-    </div>
-    
+    <header>
+        <h1>Bem-vindo à Cantina da Esquina!</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Cardápio</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="banner">
+            <h2>O Sabor da Comida Caseira</h2>
+            <p>Venha provar o melhor da culinária local.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Nosso Cardápio</h2>
+            
+            <div class="menu-item">
+                <h3>Prato do Dia: Virado à Paulista</h3>
+                <p>Arroz, feijão, bisteca, ovo frito, couve e banana à milanesa.</p>
+                <p class="price">R$ 25,00</p>
+                <button onclick="fazerPedido('Virado à Paulista')">Pedir Agora</button>
+            </div>
+
+            <div class="menu-item">
+                <h3>Lanche: Bauru Clássico</h3>
+                <p>Pão francês, rosbife, queijo derretido, tomate e picles.</p>
+                <p class="price">R$ 18,00</p>
+                <button onclick="fazerPedido('Bauru Clássico')">Pedir Agora</button>
+            </div>
+
+            <div class="menu-item">
+                <h3>Bebida: Suco de Laranja Natural</h3>
+                <p>Feito na hora, 500ml.</p>
+                <p class="price">R$ 9,00</p>
+                <button onclick="fazerPedido('Suco de Laranja')">Pedir Agora</button>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>A Cantina da Esquina serve comida de qualidade há mais de 10 anos. Usamos ingredientes frescos e muito carinho em cada prato.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Telefone: (11) 98765-4321</p>
+            <p>Endereço: Rua Fictícia, 123 - Bairro Imaginário</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cantina da Esquina. Todos os direitos reservados.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
