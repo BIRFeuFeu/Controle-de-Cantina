@@ -3,14 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste var, let, const</title>
+    <title>Cantina da Escola</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Praticando var, let e const (Curso Alura)</h1>
-        <p>Abra o console do desenvolvedor (F12 ou Ctrl+Shift+I) para ver os resultados dos testes.</p>
-        <p>Esta página está executando os testes do seu exercício.</p>
+
+    <div class="cantina-card">
+        <h1 id="nome-cantina"></h1>
+        
+        <div class="info-bloco">
+            <p>Salgados disponíveis:</p>
+            <span id="qtd-salgados">--</span>
+        </div>
+        
+        <div class="info-bloco">
+            <p>Preço por unidade:</p>
+            <span id="preco-salgado">R$ --</span>
+        </div>
+        
+        <div class="info-bloco total">
+            <p>Total vendido hoje:</p>
+            <span id="total-vendido">R$ --</span>
+        </div>
+        
+        <button id="btn-vender">Vender 1 Salgado</button>
+        
+        <p class="console-note">
+            Abra o console (F12) para ver os testes de escopo (var, let, const).
+        </p>
     </div>
     
     <script src="script.js"></script>
