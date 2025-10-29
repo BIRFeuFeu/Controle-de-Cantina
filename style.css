@@ -99,20 +99,12 @@ header nav ul li a {
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
-    
-    /* 1. Permite que o 'transform' funcione */
     display: inline-block; 
-    
-    /* --- MODIFICADO (Animação do Menu) --- */
-    /* 2. Define a suavidade da animação (agora mais rápida) */
     transition: transform 0.2s ease;
 }
 
 header nav ul li a:hover {
     text-decoration: underline;
-    
-    /* --- MODIFICADO (Animação do Menu) --- */
-    /* 3. Ação: Efeito de zoom/destaque (escala de 110%) */
     transform: scale(1.1); 
 }
 
@@ -167,24 +159,15 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    
-    /* --- MODIFICADO (Animação do Botão) --- */
-    /* 1. Transição agora inclui 'box-shadow' */
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
     background-color: #218838;
-    
-    /* --- NOVO (Animação do Botão) --- */
-    /* 2. Ação de destaque: zoom de 5% */
     transform: scale(1.05);
-    /* 3. Ação de relevo: uma sombra mais forte */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* Botão de login na página index.html */
-/* (Ele também receberá a animação, pois é um <button>) */
 .login-container button {
     width: 100%;
     margin-top: 10px;
@@ -196,4 +179,22 @@ footer {
     background-color: #333;
     color: #aaa;
     margin-top: 30px;
+}
+
+/* --- NOVO: Estilo para o link de email --- */
+/* Este seletor pega o link <a> dentro da seção #contato */
+#contato a {
+    color: #6a0dad; /* Cor roxa principal */
+    font-weight: bold;
+    text-decoration: none; /* Remove o sublinhado padrão */
+    
+    /* Propriedades para a animação funcionar */
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+/* Ação de hover: adiciona sublinhado e a animação de zoom */
+#contato a:hover {
+    text-decoration: underline;
+    transform: scale(1.1); /* O mesmo efeito de zoom do menu */
 }
