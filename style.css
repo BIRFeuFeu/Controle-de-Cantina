@@ -198,3 +198,82 @@ footer {
     text-decoration: underline;
     transform: scale(1.1); /* O mesmo efeito de zoom do menu */
 }
+
+
+
+/* --- Estilos do Carrossel de Imagens --- */
+
+#carousel-container {
+    /* O carrossel usará o estilo de 'section' (fundo branco, sombra) */
+    /* Não precisa de 'background-color' aqui */
+}
+
+#carousel-container h2 {
+    text-align: center; /* Centraliza o título "Pratos Destaque" */
+}
+
+.carousel {
+    position: relative; /* Base para posicionar os botões */
+    width: 90%;
+    max-width: 700px; /* Limita o tamanho do carrossel */
+    margin: 0 auto; /* Centraliza o carrossel na seção */
+    overflow: hidden; /* A MÁGICA: Esconde os slides que estão fora */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.carousel-slides {
+    display: flex; /* Coloca os slides lado a lado */
+    /* A largura será definida pelo JavaScript (ex: 400% para 4 slides) */
+    transition: transform 0.5s ease-in-out; /* A animação de "deslizar" */
+}
+
+.slide {
+    /* A largura será definida pelo JavaScript (ex: 25% para 4 slides) */
+    flex-shrink: 0; /* Impede que os slides encolham */
+    text-align: center;
+}
+
+.slide img {
+    width: 100%; /* Faz a imagem ocupar todo o slide */
+    height: 400px; /* ALTURA FIXA: Mantenha todas as imagens iguais */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+.slide h3 {
+    color: #6a0dad; /* Cor roxa do seu tema */
+    margin: 15px 0;
+}
+
+/* Botões de Navegação (Setas) */
+.carousel-button {
+    position: absolute; /* Posiciona por cima do carrossel */
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10; /* Garante que fiquem na frente da imagem */
+    
+    /* Pega a transição dos seus outros botões */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1); /* Efeito de zoom */
+}
+
+.prev {
+    left: 10px; /* Botão anterior na esquerda */
+}
+
+.next {
+    right: 10px; /* Botão próximo na direita */
+}
