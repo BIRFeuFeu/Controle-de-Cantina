@@ -99,10 +99,20 @@ header nav ul li a {
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
+    
+    /* --- NOVO (Animação do Menu) --- */
+    /* 1. Permite que o 'transform' funcione */
+    display: inline-block; 
+    /* 2. Define a suavidade da animação */
+    transition: transform 0.3s ease-out;
 }
 
 header nav ul li a:hover {
     text-decoration: underline;
+    
+    /* --- NOVO (Animação do Menu) --- */
+    /* 3. A ação: mover 5 pixels para CIMA */
+    transform: translateY(-5px); 
 }
 
 main {
@@ -156,14 +166,22 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    
+    /* --- MODIFICADO (Animação do Botão) --- */
+    /* 1. Modificamos a transição para incluir 'transform' */
+    transition: background-color 0.3s, transform 0.3s ease-out;
 }
 
 button:hover {
     background-color: #218838;
+    
+    /* --- NOVO (Animação do Botão) --- */
+    /* 2. A ação: mover 5 pixels para CIMA */
+    transform: translateY(-5px);
 }
 
 /* Botão de login na página index.html */
+/* (Ele também receberá a animação, pois é um <button>) */
 .login-container button {
     width: 100%;
     margin-top: 10px;
